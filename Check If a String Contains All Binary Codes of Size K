@@ -1,0 +1,15 @@
+class Solution {
+    public boolean hasAllCodes(String s, int k) {
+        int num=1<<k;
+        Set<String> st=new HashSet<>();
+        for(int i=0;i<=s.length()-k;i++){
+            String subst=s.substring(i,i+k);
+            st.add(subst);
+        }
+        if(num==st.size()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
